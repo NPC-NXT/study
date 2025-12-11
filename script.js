@@ -143,3 +143,11 @@ copyBtn.addEventListener('click', ()=>{
     .then(()=>alert("Đã sao chép kế hoạch!"))
     .catch(()=>alert("Không thể sao chép."));
 });
+// --- Đăng ký Service Worker để hỗ trợ PWA (offline / cài đặt) ---
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('ServiceWorker đã đăng ký:', reg.scope))
+      .catch(err => console.log('ServiceWorker đăng ký lỗi:', err));
+  });
+}
