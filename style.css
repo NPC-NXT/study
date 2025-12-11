@@ -28,6 +28,6 @@ button{background:var(--accent);color:#fff;border:none;padding:10px 12px;border-
 button[disabled]{opacity:.6;cursor:not-allowed}
 
 .result{flex:1;background:#111;padding:18px;border-radius:8px;border:1px solid #222;min-height:240px}
-#planOutput{white-space:pre-wrap;color:#e6e6e6}
+#planOutput{white-space:pre-wrap;color:#e6e6e6;font-size:15px;line-height:1.5}
 
-.foot{padding:18px 6%;color:#888}
+.foot{padding:18px 6%;color:#888;text-align:center}
