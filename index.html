@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Study Splitter — Chia thời gian học</title>
+  <title>Chia Thời Gian Học — Study Splitter</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="topbar">
-    <h1>Study Splitter</h1>
-    <p class="tag">Chia thời gian học theo ý muốn — nhanh & trực quan</p>
+    <h1>Ứng dụng chia thời gian học</h1>
+    <p class="tag">Tự động tạo kế hoạch học theo thời gian mong muốn</p>
   </header>
 
   <main class="container">
     <section class="form">
-      <label>Tổng thời gian (giờ):</label>
+      <label>Tổng thời gian học (giờ):</label>
       <input id="totalHours" type="number" min="0.25" step="0.25" value="2" />
 
       <div class="mode">
         <label><input type="radio" name="mode" value="bySessions" checked> Chia theo số phiên</label>
-        <label><input type="radio" name="mode" value="byLength"> Chia theo độ dài phiên (phút)</label>
+        <label><input type="radio" name="mode" value="byLength"> Chia theo độ dài mỗi phiên</label>
       </div>
 
       <div id="bySessionsBox" class="mode-box">
-        <label>Số phiên:</label>
+        <label>Số phiên muốn chia:</label>
         <input id="numSessions" type="number" min="1" value="4" />
       </div>
 
@@ -33,30 +33,30 @@
         <input id="sessionLength" type="number" min="5" value="50" />
       </div>
 
-      <label>Thời gian nghỉ giữa phiên (phút):</label>
+      <label>Thời gian nghỉ giữa các phiên (phút):</label>
       <input id="breakLength" type="number" min="0" value="5" />
 
-      <label>Phân chia nội dung (optional):</label>
+      <label>Chia nội dung trong phiên (tùy chọn):</label>
       <div class="ratios">
         <input id="r1" type="number" min="0" max="100" value="40"> <span>% Lý thuyết</span>
         <input id="r2" type="number" min="0" max="100" value="40"> <span>% Thực hành</span>
-        <input id="r3" type="number" min="0" max="100" value="20"> <span>% Ôn tóm tắt</span>
+        <input id="r3" type="number" min="0" max="100" value="20"> <span>% Ôn tập</span>
       </div>
 
       <div class="actions">
-        <button id="createBtn">Tạo kế hoạch</button>
-        <button id="copyBtn">Copy plan</button>
+        <button id="createBtn">Tạo kế hoạch học</button>
+        <button id="copyBtn">Sao chép kế hoạch</button>
       </div>
     </section>
 
     <section class="result">
-      <h2>Kế hoạch chi tiết</h2>
-      <div id="planOutput">Nhấn "Tạo kế hoạch" để xem kết quả.</div>
+      <h2>Kết quả chia thời gian</h2>
+      <div id="planOutput">Nhấn nút "Tạo kế hoạch học" để xem kết quả…</div>
     </section>
   </main>
 
   <footer class="foot">
-    <small>Made for ASM — Blue</small>
+    <small>Tạo bởi Blue • ASM AI</small>
   </footer>
 
   <script src="script.js"></script>
